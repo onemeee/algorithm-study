@@ -9,4 +9,4 @@ for i in range(int(input())):
             min_val = tmp
         if tmp > max_val:
             max_val = tmp
-    print(f'#{i+1} {max_val-min_val}')
+    print(f'#{i+1} {max_val-min_val}') 
