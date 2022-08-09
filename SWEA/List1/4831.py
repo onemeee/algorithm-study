@@ -9,10 +9,10 @@ for i in range(int(input())):
         count += 1
         move -= 1
         if count == target and move>=0:
+            print(f'#{i+1} {charge}')
             break
         if count in charge_list and move >= 0:
             if charge_list[charge_list.index(count)] + move < charge_list[charge_list.index(count) + 1]:
-                print(charge_list[charge_list.index(count)])
                 charge += 1
                 move = move_num
         elif move < 0:
