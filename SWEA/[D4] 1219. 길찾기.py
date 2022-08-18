@@ -14,6 +14,8 @@ for tc in range(1, 11):
     # 경로 표시
     for i in range(leng):
         graph[info[2*i]].append(info[2*i+1])
+    
+    # visited 갱신
     DFS(graph, 0, visited)
     if visited[99] == 1:
         result = 1
