@@ -14,10 +14,26 @@ def postfix(formula):
                             anw += stack.pop()
                         else:
                             break
+                    stack.append(info)
                 elif info == '+':
-                    while stack:
-                        anw += stack.pop()
-                stack.append(info)
+                    if stack[-1] == '(':
+                        stack.append(info)
+                    else:
+                        while stack:
+                            if stack[-1] != '(':
+                                anw += stack.pop()
+                            else:
+                                break
+                        stack.append(info)
+                elif info == '(':
+                    stack.append(info)
+                elif info == ')':
+                    while True:
+                        if stack[-1] == '(':
+                            break
+                        else:
+                            anw += stack.pop()
+                    stack.pop()
             else:
                 stack.append(info)
     if stack:
