@@ -1,15 +1,16 @@
 n = int(input())
 result = 0
-result += n//5
-remain = n%5
-if remain == 0:
-    pass
+if n % 5 == 0:
+    result += n //5
 else:
-    result += remain//3
-    remain %= 3
-    if remain:
-        if n%3==0:
-            result = n//3
-        else:
-            result = -1
+    bag = 0
+    while n >= 0:
+        n -= 3
+        bag += 1
+        if n % 5 == 0:
+            result += n//5
+            result += bag
+            break
+    if n < 0:
+        result = -1
 print(result)
