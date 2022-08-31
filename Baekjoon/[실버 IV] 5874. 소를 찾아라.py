@@ -17,6 +17,6 @@ for i in range(len(infos)-1):
                         cnt_2 = 0
 if cnt_2:
     num_list.append(cnt_1*cnt_2 + num_list[-1])
-print(num_list[-1])
+print(num_list[-1]) 
 
             
