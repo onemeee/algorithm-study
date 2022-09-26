@@ -8,5 +8,5 @@ def fibo_trans(n):
     else:
         return fibo_trans(n-1) + fibo_trans(n-2) + fibo_trans(n-3)
 
-for _ in range(int(input())):
+for _ in range(int(input())): 
     print(fibo_trans(int(input())))
