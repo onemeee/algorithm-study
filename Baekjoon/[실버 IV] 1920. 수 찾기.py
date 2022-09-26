@@ -1,3 +1,6 @@
+# in 시간복잡도 n
+# sort 시간복잡도 nlogn
+
 def binary(list, target, num):
     l = 0
     r = num-1
@@ -19,8 +22,6 @@ def binary(list, target, num):
 N = int(input())
 num_list = sorted(list(map(int, input().split())))
 M = int(input())
-num_list2 = sorted(list(map(int, input().split())))
+num_list2 = list(map(int, input().split()))
 for target_num in num_list2:
     binary(num_list, target_num, N)
-# in 시간복잡도 n
-# sort 시간복잡도 nlogn
