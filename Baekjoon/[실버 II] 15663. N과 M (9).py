@@ -15,4 +15,4 @@ result = set()
 for next in permu(nums, m):
     if tuple(next) not in result:
         result.add(tuple(next))
-        print(*next)
+        print(*next) 
