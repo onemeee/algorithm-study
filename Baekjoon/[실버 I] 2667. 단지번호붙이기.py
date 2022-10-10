@@ -26,4 +26,4 @@ for i in range(n):
 nums.sort()
 print(total)
 for num in nums:
-    print(num)
+    print(num) 
