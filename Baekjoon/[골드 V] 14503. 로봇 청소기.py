@@ -2,7 +2,6 @@ import sys
 input = sys.stdin.readline
 
 def dfs(i, j, d):
-    flag = False
     while True:
         global cnt, n, m
         for k in range(1, 5):
@@ -14,12 +13,8 @@ def dfs(i, j, d):
                     i, j = ni, nj
                     d = nd
                     rooms[i][j] = 2
-                    flag = True
                     break
-        if flag:
-            flag = False
-            continue
-        if k == 4:
+        else:
             di, dj = i + direction[(d+2)%4][0], j + direction[(d+2)%4][1]
             if rooms[di][dj] == 2:
                 i, j = di, dj
