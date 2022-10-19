@@ -11,4 +11,4 @@ for _ in range(int(input())):
         for m in range(n):
             for j in range(m+1):
                 apart[l][m] += apart[l-1][j]
-    print(apart[k][n-1])
+    print(apart[k][n-1]) 
