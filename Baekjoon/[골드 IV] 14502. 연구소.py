@@ -52,4 +52,4 @@ for wall in combi(walls, 3):
     for wal in wall:
         grid[wal[0]][wal[1]] = 0
     ans = max(ans, n*m-cnt)
-print(ans)
+print(ans) 
