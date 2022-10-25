@@ -42,7 +42,6 @@ n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
 virus = []
 cnt = 0 
-time = [0] * m
 ans = float('INF')
 findvirus()
 for vir in combi(virus, m): 
