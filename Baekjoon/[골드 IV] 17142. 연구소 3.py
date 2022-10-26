@@ -1,6 +1,5 @@
 import sys
 from collections import deque 
-from pprint import pprint
 input = sys.stdin.readline
 
 def findvirus():
