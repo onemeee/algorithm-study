@@ -1,7 +1,6 @@
 n = int(input())
 
 def hanoi(n, a, b):
-    print(f'input: {n} {a} {b}')
     if n > 1:
         hanoi(n-1, a, 6-a-b)
     print(a, b)
