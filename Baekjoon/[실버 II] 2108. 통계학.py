@@ -32,5 +32,5 @@ if len(keys) >=2:
 else:
     print(keys[0])
 
-# 범위
+# 범위 
 print(nums[-1]-nums[0])
