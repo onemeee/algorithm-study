@@ -22,4 +22,4 @@ for i in range(L-1):
     if check:
         dfs(Ms, 0, i)
         Ms += max_val
-print(Ms)
+print(Ms) 
