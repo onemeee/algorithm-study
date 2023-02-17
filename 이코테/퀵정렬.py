@@ -18,3 +18,12 @@ def quick_sort(arr, start, end):
         # 찾다가 엊갈린 경우,
         if left > right:
             arr[right], arr[pivot] = arr[pivot], arr[right]
+        else:
+            arr[left], arr[right] = arr[right], arr[left]
+    
+    # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각가 정렬 수행
+    quick_sort(arr, start, right-1)
+    quick_sort(arr, right + 1, end)
+
+quick_sort(arr, 0, len(arr)-1)
+print(arr)
