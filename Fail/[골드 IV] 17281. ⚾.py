@@ -37,12 +37,17 @@ def play(players, results):
         else:
             num = results[inning][players[idx]] - 1
             for i in range(3):
+                # 이미 상주하는 경우
                 if locs[i]:
                     locs[i] = 0
                     if i + num >= 3:
                         score += 1
                     else:
                         locs[i+num] = 1
+            if num < 3:
+                locs[num] = 1
+            else:
+                score += 1
         idx +=1
     return score
 
