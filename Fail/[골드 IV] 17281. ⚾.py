@@ -17,7 +17,7 @@ def play(players, results):
     out = 0
     inning = 0
     idx = 0
-    locs = [0] * 3
+    locs = [0] * 4
 
     while inning < n:
         # 한바퀴를 다 돈 경우
@@ -29,22 +29,24 @@ def play(players, results):
         # 아웃인 경우
         if results[inning][players[idx]] == 0:
             out += 1
+            locs = [0] * 4
             if out >= 3:
                 inning += 1
                 out = 0
                 continue
         # 안타이상
         else:
-            num = results[inning][players[idx]] - 1
-            for i in range(3):
+            # 1, 2, 3, 4
+            num = results[inning][players[idx]]
+            for i in range(1, 4):
                 # 이미 상주하는 경우
                 if locs[i]:
                     locs[i] = 0
-                    if i + num >= 3:
+                    if i + num >= 4:
                         score += 1
                     else:
                         locs[i+num] = 1
-            if num < 3:
+            if num < 4:
                 locs[num] = 1
             else:
                 score += 1
