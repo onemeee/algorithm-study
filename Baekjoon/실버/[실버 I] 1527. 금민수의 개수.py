@@ -35,14 +35,3 @@ def main():
                         break
     print(cnt)
 main()
-
-a, b = map(int, input().split())
-cnt = 0
-
-for i in range(a, b+1):
-    for num in str(i):
-        if num != '4' and num != '7':
-            break
-    else:
-        cnt += 1
-print(cnt)
